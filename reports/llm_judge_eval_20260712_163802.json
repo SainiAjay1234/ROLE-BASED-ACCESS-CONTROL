@@ -1,0 +1,223 @@
+{
+  "summary": {
+    "timestamp": "20260712_163802",
+    "judge_model": "llama-3.1-8b-instant",
+    "total_questions": 10,
+    "scored_questions": 10,
+    "failed_questions": 0,
+    "scoring_method": "llm_as_judge",
+    "scores": {
+      "faithfulness": 0.91,
+      "answer_relevancy": 0.97,
+      "context_precision": 0.77,
+      "context_recall": 0.63,
+      "correctness": 0.87
+    },
+    "overall_score": 0.83,
+    "per_role_scores": {
+      "hr": 0.83
+    }
+  },
+  "details": [
+    {
+      "index": 1,
+      "role": "hr",
+      "namespace": "employee_handbook",
+      "question": "What types of leaves are available to employees?",
+      "ground_truth": "Employees are entitled to various types of leaves including annual leave, sick leave, casual leave, maternity/paternity leave, and emergency leave as per the employee handbook.",
+      "answer": "According to the Employee Handbook, the types of leaves available to employees are:\n\n1. **Privilege/Annual Leave**: 15-21 days/year (as per state Shops & Establishments Act); accrued monthly\n2. **Sick Leave**: 12 days/year (non-cumulative; medical certificate for >2 days)\n3. **Casual Leave**: 7 days",
+      "namespaces_retrieved": [
+        "employee_handbook",
+        "hr_employee_master_data"
+      ],
+      "faithfulness": 0.9,
+      "answer_relevancy": 0.95,
+      "context_precision": 0.8,
+      "context_recall": 0.9,
+      "correctness": 0.85,
+      "reasoning": "The system-generated answer accurately lists the types of leaves available to employees, but misses maternity/paternity leave and emergency leave. The answer is highly relevant to the question and covers most of the necessary information, but some irrelevant information is included in the context. The context is mostly on-topic, but some sections are not directly related to leave policies.",
+      "error": null,
+      "overall": 0.88
+    },
+    {
+      "index": 2,
+      "role": "hr",
+      "namespace": "employee_handbook",
+      "question": "What is the probation period for new employees?",
+      "ground_truth": "New employees undergo a probation period as defined in the employee handbook before being confirmed in their roles.",
+      "answer": "The context does not contain information about the probation period for new employees.",
+      "namespaces_retrieved": [
+        "employee_handbook",
+        "hr_employee_master_data"
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_precision": 0.8,
+      "context_recall": 0.0,
+      "correctness": 0.8,
+      "reasoning": "The system correctly refused to answer the question as the context does not contain the required information, which is consistent with the ground-truth reference answer that implies the information isn't retrievable.",
+      "error": null,
+      "overall": 0.72
+    },
+    {
+      "index": 3,
+      "role": "hr",
+      "namespace": "employee_handbook",
+      "question": "What is the code of conduct policy at Emerson?",
+      "ground_truth": "The employee handbook outlines the code of conduct policy covering professional behaviour, ethics, and workplace standards expected from all employees.",
+      "answer": "The provided context does not explicitly outline a comprehensive \"Code of Conduct\" policy at Emerson. However, it does mention several aspects that could be part of such a policy, including:\n\n1. **Dress Code**: Avoid revealing, offensive, or inappropriate clothing.\n2. **Substance Abuse Policy**: Pos",
+      "namespaces_retrieved": [
+        "employee_handbook",
+        "hr_employee_master_data"
+      ],
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.9,
+      "context_precision": 0.7,
+      "context_recall": 0.6,
+      "correctness": 0.8,
+      "reasoning": "The system-generated answer is mostly faithful to the context, as it correctly identifies several aspects of the code of conduct policy. However, it fails to provide a comprehensive answer, which is a limitation of the context itself. The answer is highly relevant to the question, but the precision of the context is moderate due to the presence of irrelevant information. The context recall is also moderate, as the system fails to capture the full scope of the code of conduct policy. The correctn",
+      "error": null,
+      "overall": 0.76
+    },
+    {
+      "index": 4,
+      "role": "hr",
+      "namespace": "employee_handbook",
+      "question": "How are performance appraisals conducted?",
+      "ground_truth": "Performance appraisals are conducted as per the guidelines in the employee handbook covering evaluation criteria, frequency, and process.",
+      "answer": "Performance appraisals are conducted annually and mid-year, based on criteria such as KPIs, goals, competencies, and values. The process involves self-assessment, manager feedback, and calibration. Regular 1:1 meetings between employee and manager are also encouraged for constructive feedback.",
+      "namespaces_retrieved": [
+        "employee_handbook",
+        "hr_employee_master_data"
+      ],
+      "faithfulness": 0.9,
+      "answer_relevancy": 1.0,
+      "context_precision": 0.8,
+      "context_recall": 0.9,
+      "correctness": 0.95,
+      "reasoning": "The system-generated answer accurately reflects the context, covering the frequency, criteria, and process of performance appraisals. However, it slightly misses the mention of calibration in the context, resulting in a lower faithfulness score. The answer is fully relevant and on-topic, and the context is mostly focused, but with some irrelevant material. The context covers the necessary information for the ground-truth answer, and the generated answer is semantically equivalent to the referenc",
+      "error": null,
+      "overall": 0.91
+    },
+    {
+      "index": 5,
+      "role": "hr",
+      "namespace": "employee_handbook",
+      "question": "What is the grievance redressal process for employees?",
+      "ground_truth": "The employee handbook defines the grievance redressal process including how to raise complaints and escalation procedures.",
+      "answer": "The grievance redressal process for employees involves the following steps: \n\n1. Attempt informal resolution with the concerned party.\n2. If unresolved, escalate to HR or the Grievance Redressal Officer.\n3. Formal complaints are investigated impartially and resolved within 30 days. \n\nAdditionally, e",
+      "namespaces_retrieved": [
+        "employee_handbook",
+        "hr_employee_master_data"
+      ],
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.95,
+      "context_precision": 0.7,
+      "context_recall": 0.9,
+      "correctness": 0.85,
+      "reasoning": "The system-generated answer accurately describes the grievance redressal process, but slightly deviates from the ground-truth answer by not explicitly mentioning the employee handbook. The answer is highly relevant to the question, but the context precision is lower due to the presence of irrelevant information in the retrieved context.",
+      "error": null,
+      "overall": 0.84
+    },
+    {
+      "index": 6,
+      "role": "hr",
+      "namespace": "employee_handbook",
+      "question": "What are the working hours and attendance policies?",
+      "ground_truth": "The employee handbook specifies working hours, shift timings, attendance tracking, and policies related to punctuality.",
+      "answer": "According to the provided context, the working hours and attendance policies are as follows:\n\n**Work Hours:**\n- **Standard Hours**: 9 hours/day (including 1 hour break), 6 days/week or 8 hours/day, 5 days/week (as per company policy).\n- **Flexible Timings**: Allowed for eligible roles, subject to ma",
+      "namespaces_retrieved": [
+        "employee_handbook",
+        "hr_employee_master_data"
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_precision": 0.8,
+      "context_recall": 1.0,
+      "correctness": 0.9,
+      "reasoning": "The system-generated answer accurately reflects the working hours and attendance policies from the retrieved context, with minor omissions. It correctly addresses the question and is fully relevant, but some irrelevant context chunks are present.",
+      "error": null,
+      "overall": 0.94
+    },
+    {
+      "index": 7,
+      "role": "hr",
+      "namespace": "employee_handbook",
+      "question": "What are the travel and expense reimbursement policies?",
+      "ground_truth": "The employee handbook covers travel policies including eligible expenses, reimbursement process, and approval requirements.",
+      "answer": "The travel and expense reimbursement policies are as follows:\n\n- Eligible Expenses:\n  - Travel: Air/train/bus fare (economy class), local conveyance (cab, auto, mileage).\n  - Accommodation: Hotel stay up to \u20b93,000/night (actuals with bill).\n  - Meals: Up to \u20b9500/day on official travel.\n  - Office Su",
+      "namespaces_retrieved": [
+        "employee_handbook",
+        "hr_employee_master_data"
+      ],
+      "faithfulness": 0.9,
+      "answer_relevancy": 1.0,
+      "context_precision": 0.8,
+      "context_recall": 1.0,
+      "correctness": 0.95,
+      "reasoning": "The system-generated answer accurately reflects the travel and expense reimbursement policies, but slightly deviates from the original text in formatting and minor details. The answer is fully relevant and on-topic, and the retrieved context is mostly focused with some minor irrelevant material.",
+      "error": null,
+      "overall": 0.93
+    },
+    {
+      "index": 8,
+      "role": "hr",
+      "namespace": "hr_employee_master_data",
+      "question": "How many employees are currently in the organization?",
+      "ground_truth": "The HR employee master data contains the total headcount and department-wise employee distribution.",
+      "answer": "According to the HR Employee Master Data document, there are 100 total employee records.",
+      "namespaces_retrieved": [
+        "employee_handbook",
+        "hr_employee_master_data"
+      ],
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.9,
+      "context_precision": 0.7,
+      "context_recall": 1.0,
+      "correctness": 0.8,
+      "reasoning": "The system's answer is mostly faithful as it directly references the HR Employee Master Data document, but it could be more precise in stating that the total headcount is 100. The answer is highly relevant to the question, but the context precision is lower due to the presence of irrelevant employee records. The context recall is perfect as it contains the necessary information to produce the ground-truth answer. The correctness is high as the system's answer matches the meaning/content of the g",
+      "error": null,
+      "overall": 0.84
+    },
+    {
+      "index": 9,
+      "role": "hr",
+      "namespace": "hr_employee_master_data",
+      "question": "Which department has the highest number of employees?",
+      "ground_truth": "The HR employee master data provides department-wise employee counts which can be used to determine the largest department.",
+      "answer": "The context does not contain information about the department-wise distribution of employees or the number of employees in each department. The provided HR Employee Master Data document contains sample records, but it does not provide a comprehensive overview of the department-wise employee distribu",
+      "namespaces_retrieved": [
+        "employee_handbook",
+        "hr_employee_master_data"
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_precision": 0.8,
+      "context_recall": 0.0,
+      "correctness": 0.9,
+      "reasoning": "The system correctly identifies that the context does not contain sufficient information to answer the question, and provides a clear explanation for this conclusion.",
+      "error": null,
+      "overall": 0.74
+    },
+    {
+      "index": 10,
+      "role": "hr",
+      "namespace": "hr_employee_master_data",
+      "question": "What is the gender diversity ratio in the organization?",
+      "ground_truth": "The HR employee master data includes demographic information including gender distribution across the organization.",
+      "answer": "The context does not contain information about the gender diversity ratio in the organization. The provided documents only mention that the company values diversity and has a policy of no discrimination based on gender, but it does not provide any specific data or statistics on the gender diversity ",
+      "namespaces_retrieved": [
+        "employee_handbook",
+        "hr_employee_master_data"
+      ],
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_precision": 0.8,
+      "context_recall": 0.0,
+      "correctness": 0.9,
+      "reasoning": "The system correctly identifies that the context does not contain the required information, and its answer is semantically equivalent to the ground-truth reference answer, which also implies that the information is not retrievable.",
+      "error": null,
+      "overall": 0.74
+    }
+  ]
+}

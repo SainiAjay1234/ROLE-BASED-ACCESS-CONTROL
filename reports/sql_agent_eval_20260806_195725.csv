@@ -1,0 +1,15 @@
+index,role,question,check_type,expected,agent_success,passed
+1,hr,"How many employees are there in total?",numeric,"5",True,True
+2,hr,"How many employees work in the Engineering department?",numeric,"1",True,True
+3,hr,"What is the average salary of all employees?",numeric,"85400.0",True,True
+4,hr,"Who is the employee with the highest salary?",text,"Carol White",True,True
+5,hr,"How many employees are based in Noida?",numeric,"2",True,True
+6,hr,"List employees with more than 5 years of experience.",text_list,"['Bob Jones', 'Carol White']",True,True
+7,finance,"What was the total revenue across all quarters?",numeric,"55600000",True,False
+8,finance,"What was the profit in Q4?",numeric,"4100000",True,True
+9,finance,"What were the total expenses for the year?",numeric,"41500000",True,False
+10,finance,"Which quarter had the highest revenue?",text,"Q4",True,True
+11,admin,"How many employees are in the HR department?",numeric,"2",True,True
+12,admin,"What is the total profit across all quarters?",numeric,"14100000",True,False
+13,engineering,"How many employees are there in total?",denied,"None",False,True
+14,marketing,"What was the total revenue last quarter?",denied,"None",False,True

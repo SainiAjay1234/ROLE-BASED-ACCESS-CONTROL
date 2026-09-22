@@ -1,0 +1,181 @@
+{
+  "summary": {
+    "timestamp": "20260806_195725",
+    "total_questions": 14,
+    "passed": 11,
+    "failed": 3,
+    "accuracy": 0.7857,
+    "per_role_accuracy": {
+      "hr": 1.0,
+      "finance": 0.5,
+      "admin": 0.5,
+      "engineering": 1.0,
+      "marketing": 1.0
+    },
+    "failures": [
+      {
+        "question": "What was the total revenue across all quarters?",
+        "role": "finance",
+        "expected": 55600000,
+        "got": "|   sum(revenue) |\n|---------------:|\n|       5.56e+07 |"
+      },
+      {
+        "question": "What were the total expenses for the year?",
+        "role": "finance",
+        "expected": 41500000,
+        "got": "|   sum(expenses) |\n|----------------:|\n|        4.15e+07 |"
+      },
+      {
+        "question": "What is the total profit across all quarters?",
+        "role": "admin",
+        "expected": 14100000,
+        "got": "|   sum(profit) |\n|--------------:|\n|      1.41e+07 |"
+      }
+    ]
+  },
+  "details": [
+    {
+      "index": 1,
+      "role": "hr",
+      "question": "How many employees are there in total?",
+      "check_type": "numeric",
+      "expected": 5,
+      "agent_success": true,
+      "agent_answer": "|   count_star() |\n|---------------:|\n|              5 |",
+      "passed": true
+    },
+    {
+      "index": 2,
+      "role": "hr",
+      "question": "How many employees work in the Engineering department?",
+      "check_type": "numeric",
+      "expected": 1,
+      "agent_success": true,
+      "agent_answer": "|   count(employee_id) |\n|---------------------:|\n|                    1 |",
+      "passed": true
+    },
+    {
+      "index": 3,
+      "role": "hr",
+      "question": "What is the average salary of all employees?",
+      "check_type": "numeric",
+      "expected": 85400.0,
+      "agent_success": true,
+      "agent_answer": "|   avg(salary) |\n|--------------:|\n|         85400 |",
+      "passed": true
+    },
+    {
+      "index": 4,
+      "role": "hr",
+      "question": "Who is the employee with the highest salary?",
+      "check_type": "text",
+      "expected": "Carol White",
+      "agent_success": true,
+      "agent_answer": "| name        |\n|:------------|\n| Carol White |",
+      "passed": true
+    },
+    {
+      "index": 5,
+      "role": "hr",
+      "question": "How many employees are based in Noida?",
+      "check_type": "numeric",
+      "expected": 2,
+      "agent_success": true,
+      "agent_answer": "|   count(employee_id) |\n|---------------------:|\n|                    2 |",
+      "passed": true
+    },
+    {
+      "index": 6,
+      "role": "hr",
+      "question": "List employees with more than 5 years of experience.",
+      "check_type": "text_list",
+      "expected": [
+        "Bob Jones",
+        "Carol White"
+      ],
+      "agent_success": true,
+      "agent_answer": "|   employee_id | name        | department   |   salary | location   |   years_exp |\n|--------------:|:------------|:-------------|---------:|:-----------|------------:|\n|          1002 | Bob Jones   | Finance      |    90000 | Mumbai     |           8 |\n|          1003 | Carol White | Engineering  |   110000 | Bangalore  |          12 |",
+      "passed": true
+    },
+    {
+      "index": 7,
+      "role": "finance",
+      "question": "What was the total revenue across all quarters?",
+      "check_type": "numeric",
+      "expected": 55600000,
+      "agent_success": true,
+      "agent_answer": "|   sum(revenue) |\n|---------------:|\n|       5.56e+07 |",
+      "passed": false
+    },
+    {
+      "index": 8,
+      "role": "finance",
+      "question": "What was the profit in Q4?",
+      "check_type": "numeric",
+      "expected": 4100000,
+      "agent_success": true,
+      "agent_answer": "|   profit |\n|---------:|\n|  4100000 |",
+      "passed": true
+    },
+    {
+      "index": 9,
+      "role": "finance",
+      "question": "What were the total expenses for the year?",
+      "check_type": "numeric",
+      "expected": 41500000,
+      "agent_success": true,
+      "agent_answer": "|   sum(expenses) |\n|----------------:|\n|        4.15e+07 |",
+      "passed": false
+    },
+    {
+      "index": 10,
+      "role": "finance",
+      "question": "Which quarter had the highest revenue?",
+      "check_type": "text",
+      "expected": "Q4",
+      "agent_success": true,
+      "agent_answer": "| quarter   |\n|:----------|\n| Q4        |",
+      "passed": true
+    },
+    {
+      "index": 11,
+      "role": "admin",
+      "question": "How many employees are in the HR department?",
+      "check_type": "numeric",
+      "expected": 2,
+      "agent_success": true,
+      "agent_answer": "|   count(employee_id) |\n|---------------------:|\n|                    2 |",
+      "passed": true
+    },
+    {
+      "index": 12,
+      "role": "admin",
+      "question": "What is the total profit across all quarters?",
+      "check_type": "numeric",
+      "expected": 14100000,
+      "agent_success": true,
+      "agent_answer": "|   sum(profit) |\n|--------------:|\n|      1.41e+07 |",
+      "passed": false
+    },
+    {
+      "index": 13,
+      "role": "engineering",
+      "question": "How many employees are there in total?",
+      "check_type": "denied",
+      "expected": null,
+      "agent_success": false,
+      "agent_answer": "You do not have access to structured data tables.",
+      "passed": true
+    },
+    {
+      "index": 14,
+      "role": "marketing",
+      "question": "What was the total revenue last quarter?",
+      "check_type": "denied",
+      "expected": null,
+      "agent_success": false,
+      "agent_answer": "You do not have access to structured data tables.",
+      "passed": true
+    }
+  ]
+}
